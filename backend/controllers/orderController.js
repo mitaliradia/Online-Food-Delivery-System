@@ -14,7 +14,7 @@ exports.placeOrder = async (req, res) => {
     } = req.body
 
     // Get a random driver
-    const [drivers] = await connection.query("SELECT * FROM delivery_drivers ORDER BY RAND() LIMIT 1")
+    const [drivers] = await connection.query("SELECT * FROM drivers ORDER BY RAND() LIMIT 1")
     const driverId = drivers.length > 0 ? drivers[0].driver_id : null
 
     // 1. Create a new order in food_orders table
@@ -61,7 +61,7 @@ exports.placeOrder = async (req, res) => {
       `SELECT fo.*, r.restaurant_name, dd.name as driver_name, dd.phone_no as driver_phone
        FROM food_orders fo
        JOIN restaurants r ON fo.restaurant_id = r.id
-       LEFT JOIN delivery_drivers dd ON fo.assigned_driver_id = dd.driver_id
+       LEFT JOIN drivers dd ON fo.assigned_driver_id = dd.driver_id
        WHERE fo.id = ?`,
       [orderId],
     )
@@ -106,7 +106,7 @@ exports.getOrderById = async (req, res) => {
        FROM food_orders fo
        JOIN restaurants r ON fo.restaurant_id = r.id
        JOIN order_status os ON fo.order_status_id = os.id
-       LEFT JOIN delivery_drivers dd ON fo.assigned_driver_id = dd.driver_id
+       LEFT JOIN drivers dd ON fo.assigned_driver_id = dd.driver_id
        WHERE fo.id = ?`,
       [id],
     )

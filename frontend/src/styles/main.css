@@ -68,7 +68,7 @@
   
   /* Navbar */
   .navbar {
-    background-color: #ff5722;
+    background-color: hsl(0, 87%, 58%);
     color: white;
     padding: 15px 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -158,7 +158,7 @@
   }
   
   .social-icons i:hover {
-    color: #ff5722;
+    color: hsl(0, 87%, 58%);
   }
   
   .footer-bottom {
@@ -198,7 +198,7 @@
   }
   
   .cta-button {
-    background-color: #ff5722;
+    background-color: hsl(0, 87%, 58%);
     color: white;
     padding: 12px 24px;
     border-radius: 4px;
@@ -253,7 +253,7 @@
   
   .table-name {
     font-size: 18px;
-    color: #ff5722;
+    color: hsl(0, 87%, 58%);
   }
   
   .table-toggle {
@@ -310,7 +310,7 @@
   
   .page-header i {
     margin-right: 10px;
-    color: #ff5722;
+    color: hsl(0, 87%, 58%);
   }
   
   .restaurants-container {
@@ -335,7 +335,7 @@
   
   .restaurant-image {
     height: 150px;
-    background-color: #ff5722;
+    background-color: hsl(0, 87%, 58%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -363,12 +363,12 @@
   
   .restaurant-info p i {
     margin-right: 8px;
-    color: #ff5722;
+    color: hsl(0, 87%, 58%);
   }
   
   .view-menu-btn {
     display: block;
-    background-color: #ff5722;
+    background-color: hsl(0, 87%, 58%);
     color: white;
     text-align: center;
     padding: 12px;
@@ -421,7 +421,7 @@
   }
   
   .menu-item-price {
-    color: #ff5722;
+    color: hsl(0, 87%, 58%);
     font-weight: bold;
     font-size: 16px;
   }
@@ -477,7 +477,7 @@
   
   .order-summary h2 i {
     margin-right: 10px;
-    color: #ff5722;
+    color: hsl(0, 87%, 58%);
   }
   
   .empty-cart {
@@ -528,7 +528,7 @@
   .total {
     font-weight: bold;
     font-size: 18px;
-    color: #ff5722;
+    color: hsl(0, 87%, 58%);
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid #e9ecef;
@@ -655,7 +655,7 @@
   
   .action-button {
     flex: 1;
-    background-color: #ff5722;
+    background-color: hsl(0, 87%, 58%);
     color: white;
     padding: 12px 20px;
     border-radius: 4px;

@@ -47,7 +47,7 @@ button:disabled {
 
 /* Navbar */
 .navbar {
-  background-color: #ff5722;
+  background-color: hsl(0, 87%, 58%);
   color: white;
   padding: 15px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -104,7 +104,7 @@ button:disabled {
 
 .restaurant-card h3 {
   margin-bottom: 10px;
-  color: #ff5722;
+  color: hsl(0, 87%, 58%);
 }
 
 /* Order Page */
@@ -114,7 +114,7 @@ button:disabled {
 
 .back-btn {
   background-color: transparent;
-  color: #ff5722;
+  color: hsl(0, 87%, 58%);
   padding: 8px 0;
   margin-bottom: 20px;
   font-weight: bold;
@@ -142,7 +142,7 @@ button:disabled {
 
 .menu-list h2 {
   margin-bottom: 20px;
-  color: #ff5722;
+  color:hsl(0, 87%, 58%);
 }
 
 .menu-items {
@@ -170,7 +170,7 @@ button:disabled {
 }
 
 .price {
-  color: #ff5722;
+  color:hsl(0, 87%, 58%);
   font-weight: bold;
 }
 
@@ -193,7 +193,7 @@ button:disabled {
 }
 
 .add-to-order-btn {
-  background-color: #ff5722;
+  background-color: hsl(0, 87%, 58%);
   color: white;
   padding: 10px 20px;
   width: 100%;
@@ -216,7 +216,7 @@ button:disabled {
 
 .order-summary h2 {
   margin-bottom: 20px;
-  color: #ff5722;
+  color: hsl(0, 87%, 58%);
 }
 
 .order-items {
@@ -254,7 +254,7 @@ button:disabled {
 .total {
   font-weight: bold;
   font-size: 18px;
-  color: #ff5722;
+  color: hsl(0, 87%, 58%);
 }
 
 .place-order-btn {
@@ -292,7 +292,7 @@ button:disabled {
 }
 
 .new-order-btn {
-  background-color: #ff5722;
+  background-color: hsl(0, 87%, 58%);
   color: white;
   padding: 10px 20px;
   font-weight: bold;
