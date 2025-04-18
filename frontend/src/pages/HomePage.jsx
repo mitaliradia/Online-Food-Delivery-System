@@ -10,23 +10,31 @@ function HomePage() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    // Fetch all tables from the API
-    fetch("http://localhost:5000/api/tables")
-      .then((response) => {
+    const fetchTables = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/api/tables", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          credentials: 'include'
+        });
+
         if (!response.ok) {
-          throw new Error("Failed to fetch tables")
+          throw new Error(`HTTP error! status: ${response.status}`);
         }
-        return response.json()
-      })
-      .then((data) => {
-        setTables(data)
-        setLoading(false)
-      })
-      .catch((error) => {
-        console.error("Error fetching tables:", error)
-        setError(error.message)
-        setLoading(false)
-      })
+
+        const data = await response.json();
+        setTables(data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching tables:", error);
+        setError(error.message);
+        setLoading(false);
+      }
+    };
+
+    fetchTables();
   }, [])
 
   if (loading) {
