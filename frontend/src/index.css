@@ -5,11 +5,39 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #2c3e50;    /* Deep blue-gray */
+  --primary-hover: #34495e;    /* Darker blue-gray */
+  --secondary-color: #95a5a6;  /* Soft gray */
+  --success-color: #27ae60;    /* Clean green */
+  --success-hover: #219a52;    /* Darker green */
+  --background: #f5f6fa;       /* Light cool gray */
+  --text-primary: #2d3436;     /* Dark gray for text */
+  --text-secondary: #636e72;   /* Medium gray for secondary text */
+  --accent-color: #e67e22;     /* Warm orange for accents */
+  --accent-hover: #d35400;     /* Darker orange */
+  --shadow: rgba(0, 0, 0, 0.05);/* Subtle shadow */
+  --card-background: #ffffff;  /* Pure white for cards */
+  /* Add font variables */
+  --font-primary: 'Poppins', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-primary);
   line-height: 1.6;
-  color: #333;
-  background-color: #f5f5f5;
+  color: var(--text-primary);
+  background-color: var(--background);
+  font-weight: var(--font-weight-regular);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-semibold);
 }
 
 .container {
@@ -24,7 +52,9 @@ button {
   border-radius: 4px;
   padding: 8px 16px;
   font-size: 14px;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
 }
 
 button:disabled {
@@ -36,88 +66,123 @@ button:disabled {
 .error {
   text-align: center;
   margin: 20px 0;
-  padding: 10px;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 .error {
-  color: #d32f2f;
-  background-color: #ffebee;
-  border-radius: 4px;
+  color: #e74c3c;
+  background-color: #fdf0ed;
 }
 
 /* Navbar */
 .navbar {
-  background-color: hsl(0, 87%, 58%);
-  color: white;
+  background-color: var(--card-background);
+  color: var(--text-primary);
   padding: 15px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--shadow);
 }
 
 .navbar h1 {
   font-size: 24px;
+  color: var(--primary-color);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.5px;
 }
 
 /* Home Page */
 .home-page {
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .welcome-section {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, var(--card-background) 0%, #f8fafc 100%);
+  padding: 60px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow);
 }
 
 .welcome-section h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
+  font-size: 32px;
+  color: #1e293b;  /* Rich slate blue instead of gray */
+  margin-bottom: 20px;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.5px;
+}
+
+.welcome-section p {
+  color: #334155;  /* Softer slate blue for paragraph */
+  font-size: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Add a subtle hover effect */
+.welcome-section:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
 }
 
 /* Restaurant Selector */
 .restaurant-selector {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .restaurant-selector h2 {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   text-align: center;
+  color: var(--text-primary);
 }
 
 .restaurant-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
 }
 
 .restaurant-card {
-  background-color: white;
-  border-radius: 8px;
+  background-color: var(--card-background);
+  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px var(--shadow);
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .restaurant-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px var(--shadow);
+  border-color: var(--accent-color);
 }
 
 .restaurant-card h3 {
+  color: var(--text-primary);
   margin-bottom: 10px;
-  color: hsl(0, 87%, 58%);
+  font-size: 20px;
 }
 
 /* Order Page */
 .order-page {
-  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .back-btn {
-  background-color: transparent;
-  color: hsl(0, 87%, 58%);
-  padding: 8px 0;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 20px;
-  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: var(--accent-color);
 }
 
 .order-container {
@@ -142,7 +207,7 @@ button:disabled {
 
 .menu-list h2 {
   margin-bottom: 20px;
-  color:hsl(0, 87%, 58%);
+  color:var(--accent-color);
 }
 
 .menu-items {
@@ -167,11 +232,13 @@ button:disabled {
 
 .menu-item-details h3 {
   margin-bottom: 5px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.3px;
 }
 
 .price {
-  color:hsl(0, 87%, 58%);
-  font-weight: bold;
+  color:var(--accent-color);
+  font-weight: var(--font-weight-semibold);
 }
 
 .quantity-control {
@@ -193,11 +260,12 @@ button:disabled {
 }
 
 .add-to-order-btn {
-  background-color: hsl(0, 87%, 58%);
+  background-color: var(--accent-color);
   color: white;
   padding: 10px 20px;
   width: 100%;
-  font-weight: bold;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.3px;
 }
 
 .add-to-order-btn:hover {
@@ -216,7 +284,7 @@ button:disabled {
 
 .order-summary h2 {
   margin-bottom: 20px;
-  color: hsl(0, 87%, 58%);
+  color: var(--accent-color);
 }
 
 .order-items {
@@ -252,9 +320,10 @@ button:disabled {
 }
 
 .total {
-  font-weight: bold;
+  font-weight: var(--font-weight-semibold);
   font-size: 18px;
-  color: hsl(0, 87%, 58%);
+  color: var(--accent-color);
+  letter-spacing: -0.3px;
 }
 
 .place-order-btn {
@@ -262,8 +331,9 @@ button:disabled {
   color: white;
   padding: 12px 20px;
   width: 100%;
-  font-weight: bold;
+  font-weight: var(--font-weight-semibold);
   margin-top: 15px;
+  letter-spacing: 0.3px;
 }
 
 .place-order-btn:hover {
@@ -292,8 +362,28 @@ button:disabled {
 }
 
 .new-order-btn {
-  background-color: hsl(0, 87%, 58%);
+  background-color: var(--accent-color);
   color: white;
   padding: 10px 20px;
-  font-weight: bold;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.3px;
+}
+
+/* Add animation keyframes */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations */
+.restaurant-card,
+.menu-item,
+.order-summary {
+  animation: slideUp 0.3s ease-out forwards;
 }
