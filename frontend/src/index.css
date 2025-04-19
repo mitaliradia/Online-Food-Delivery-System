@@ -77,15 +77,15 @@ button:disabled {
 
 /* Navbar */
 .navbar {
-  background-color: var(--card-background);
-  color: var(--text-primary);
+  background-color: #0b213f;
+  color: white;
   padding: 15px 0;
   box-shadow: 0 2px 8px var(--shadow);
 }
 
 .navbar h1 {
   font-size: 24px;
-  color: var(--primary-color);
+  color: white;
   font-weight: var(--font-weight-bold);
   letter-spacing: -0.5px;
 }
@@ -156,7 +156,7 @@ button:disabled {
 .restaurant-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 20px var(--shadow);
-  border-color: var(--accent-color);
+  border-color: var(#E63946);
 }
 
 .restaurant-card h3 {
@@ -207,7 +207,7 @@ button:disabled {
 
 .menu-list h2 {
   margin-bottom: 20px;
-  color:var(--accent-color);
+  color:var(#E63946);
 }
 
 .menu-items {
@@ -260,7 +260,7 @@ button:disabled {
 }
 
 .add-to-order-btn {
-  background-color: var(--accent-color);
+  background-color: var(#E63946);
   color: white;
   padding: 10px 20px;
   width: 100%;
@@ -362,7 +362,7 @@ button:disabled {
 }
 
 .new-order-btn {
-  background-color: var(--accent-color);
+  background-color: var(#E63946);
   color: white;
   padding: 10px 20px;
   font-weight: var(--font-weight-semibold);
